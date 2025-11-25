@@ -77,7 +77,7 @@ def create_dataframe(data, knn_initial_model, purpose_mapping, knn_cur_model, sc
     #clean credit score
     df.loc[df['credit_score'] > 850, 'credit_score'] = df.loc[df['credit_score'] > 850, 'credit_score'] / 10
 
-    #clean home ownership
+
     df['home_ownership'] = df['home_ownership'].replace('HaveMortgage', 'Home Mortgage')
 
     #convert string values into lower case and snake case

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoanLens – Loan Decision System</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>LoanLens – Loan Decision System</h1>
+
+    <div class="main">
+        <div class="input-box">
+            <h2>Applicant Information</h2>
+
+            <form id="loanForm">
+                <label>Current Loan Amount</label>
+                <input type="number" id="current_loan_amount">
+
+                <label>Term</label>
+                <select id="term">
+                    <option>Short Term</option>
+                    <option>Long Term</option>
+                </select>
+
+                <label>Credit Score</label>
+                <input type="number" id="credit_score">
+
+                <label>Years in Current Job</label>
+                <input type="number" id="years_in_current_job">
+
+                <label>Home Ownership</label>
+                <select id="home_ownership">
+                    <option>Rent</option>
+                    <option>Own Home</option>
+                    <option>Mortgage</option>
+                </select>
+
+                <label>Annual Income</label>
+                <input type="number" id="annual_income">
+
+                <label>Purpose</label>
+                <select id="purpose">
+                    <option>Debt Consolidation</option>
+                    <option>Home Improvements</option>
+                    <option>Buy a Car</option>
+                    <option>Moving</option>
+                    <option>Wedding</option>
+                    <option>Buy House</option>
+                    <option>Medical Bills</option>
+                    <option>Renewable Energy</option>
+                    <option>Vacation</option>
+                    <option>Other</option>
+                </select>
+
+                <label>Monthly Debt</label>
+                <input type="number" id="monthly_debt">
+
+                <label>Years of Credit History</label>
+                <input type="number" id="years_of_credit_history">
+
+                <label>Months Since Last Delinquent</label>
+                <input type="number" id="months_since_last_delinquent">
+
+                <label>Open Accounts</label>
+                <input type="number" id="number_of_open_accounts">
+
+                <label>Credit Problems</label>
+                <input type="number" id="number_of_credit_problems">
+
+                <label>Current Credit Balance</label>
+                <input type="number" id="current_credit_balance">
+
+                <label>Maximum Open Credit</label>
+                <input type="number" id="maximum_open_credit">
+
+                <label>Bankruptcies</label>
+                <input type="number" id="bankruptcies">
+
+                <label>Tax Liens</label>
+                <input type="number" id="tax_liens">
+
+                <button type="button" onclick="predictLoan()">Predict</button>
+            </form>
+        </div>
+
+        <div class="output-box">
+            <h2>Prediction Result</h2>
+            <div id="resultBox">No prediction yet.</div>
+
+            <h2>Feature Influence</h2>
+            <canvas id="shapChart" width="400" height="300"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

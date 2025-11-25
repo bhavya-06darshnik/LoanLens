@@ -1,4 +1,4 @@
-
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 import uvicorn
@@ -16,6 +16,17 @@ import re
 import preprocess
 
 LoanPredApp = FastAPI()
+
+LoanPredApp.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],   # allow all frontends for testing
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+
 
 
 current_dir = os.getcwd()
