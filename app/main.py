@@ -44,7 +44,7 @@ scaler_path = os.path.join(current_dir, scaler_filename)
 purpose_path = os.path.join(current_dir, purpose_filename)
 
 
-h2o.init()
+h2o.init(max_mem_size="1G")
 
 model = h2o.load_model(model_path)
 gbm_model = h2o.load_model(gbm_cur_filename)
